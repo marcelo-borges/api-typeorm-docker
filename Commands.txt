@@ -1,0 +1,24 @@
+## Aula 1 https://www.youtube.com/watch?v=tCVU2l89qz0
+## Aula 2 https://www.youtube.com/watch?v=52epLeKi-gA
+## Aula 3 https://www.youtube.com/watch?v=kTLKWuljYuY
+## Aula 4 https://www.youtube.com/watch?v=Aptab8PjxBg
+
+npm i typeorm -g
+
+// criar projeto
+typeorm init --name typeorm-api --database postgres
+cd typeorm-api
+npm i -> para instalar as dependencias
+
+#usar docker compose => https://renatogroffe.medium.com/postgresql-pgadmin-4-docker-compose-montando-rapidamente-um-ambiente-para-uso-55a2ab230b89
+
+docker-compose up -d
+
+npm start => instala as tabelas e roda a api
+
+npm i -S express cors morgan
+
+npm i -D @types/express nodemon
+
+depois dessa parte rodar
+npm run dev

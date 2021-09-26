@@ -1,0 +1,26 @@
+version: "3"
+services:
+  db:
+    image: "postgres:latest"
+    environment:
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_USER: postgres
+      POSTGRES_DB: api_typeorm
+    volumes:
+      - ./pgdata:/var/lib/postgresql/data
+    ports:
+      - "15432:5432"
+    networks:
+      - postgres-compose-network
+  app:
+    container_name: typeorm_api
+    restart: always
+    build: .
+    ports:
+     - "3000:3000"
+    depends_on:
+     - db
+
+networks:
+  postgres-compose-network:
+    driver: bridge
